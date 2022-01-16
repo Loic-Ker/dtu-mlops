@@ -1,6 +1,6 @@
 import torch
-from torch import nn, optim
 from model import Classifier
+from torch import nn, optim
 
 
 def train(epochs=20, lr=0.001):
