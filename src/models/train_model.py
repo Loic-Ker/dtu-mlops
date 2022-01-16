@@ -45,7 +45,6 @@ def train(epochs=20, lr=0.001):
                 count += 1
                 accuracy_epoch += accuracy
 
-        ## TODO: Implement the validation pass and print out the validation accuracy
         print(f"Accuracy, validation: {(accuracy_epoch/count)*100}%")
 
 
