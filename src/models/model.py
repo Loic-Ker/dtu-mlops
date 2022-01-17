@@ -1,16 +1,16 @@
-from torch import nn, optim
 import torch.nn.functional as F
+from torch import nn
 
 
 class Classifier(nn.Module):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, perc_dropout: float):
+        super(Classifier, self).__init__()
         self.fc1 = nn.Linear(784, 256)
         self.fc2 = nn.Linear(256, 128)
         self.fc3 = nn.Linear(128, 64)
         self.fc4 = nn.Linear(64, 10)
 
-        self.dropout = nn.Dropout(p=0.2)
+        self.dropout = nn.Dropout(p=perc_dropout)
 
     def forward(self, x):
         # make sure input tensor is flattened

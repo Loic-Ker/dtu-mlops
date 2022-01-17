@@ -1,0 +1,4 @@
+epochs: 5
+lr: 0.01
+seed: 124
+perc_dropout: 0.1

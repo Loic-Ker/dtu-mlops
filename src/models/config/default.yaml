@@ -1,0 +1,6 @@
+defaults:
+    - experiment: training_config
+
+hydra:
+  run:
+    dir: .
