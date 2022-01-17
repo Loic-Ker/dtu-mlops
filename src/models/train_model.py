@@ -8,6 +8,7 @@ from omegaconf import OmegaConf
 
 log = logging.getLogger(__name__)
 
+
 @hydra.main(config_path="config", config_name="default.yaml")
 def train(config):
     log.info("Training")
