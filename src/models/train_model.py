@@ -1,10 +1,10 @@
 import logging
 
+import hydra
 import torch
 from model import Classifier
-from torch import nn, optim
-import hydra
 from omegaconf import OmegaConf
+from torch import nn, optim
 
 log = logging.getLogger(__name__)
 
