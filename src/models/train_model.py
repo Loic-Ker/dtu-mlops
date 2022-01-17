@@ -1,12 +1,23 @@
+import logging
+
 import torch
 from model import Classifier
 from torch import nn, optim
+import hydra
+from omegaconf import OmegaConf
 
+log = logging.getLogger(__name__)
 
-def train(epochs=20, lr=0.001):
-    print("Training")
+@hydra.main(config_path="config", config_name="default.yaml")
+def train(config):
+    log.info("Training")
+    log.info(f"configuration: \n {OmegaConf.to_yaml(config)}")
+    hparams = config.experiment
+    lr = hparams["lr"]
+    epochs = hparams["epochs"]
+    dropout = hparams["perc_dropout"]
 
-    model = Classifier()
+    model = Classifier(dropout)
 
     train = torch.load("data/processed/train.pt")
     train_set = torch.utils.data.DataLoader(train, batch_size=64, shuffle=True)

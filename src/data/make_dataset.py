@@ -40,7 +40,7 @@ def load_data(root_dir: str, output_filepath: str) -> None:
 @click.command()
 @click.argument(
     "input_filepath",
-    default="data/raw/asl_alphabet_train",
+    default="data/raw",
     type=click.Path(exists=True),
 )
 @click.argument("output_filepath", default="data/processed/", type=click.Path())

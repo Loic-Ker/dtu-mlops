@@ -1,0 +1,5 @@
+experiment:
+  epochs: 10
+  lr: 0.001
+  seed: 123
+  perc_dropout: 0.2
