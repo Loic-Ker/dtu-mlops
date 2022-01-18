@@ -1,0 +1,1 @@
+Computational complexity:       11.58 GMacNumber of parameters:           60.19 M 

@@ -20,7 +20,7 @@ Modifications
 
 > S2
 
-- MNIST : adding the code to github, creating the cookiecutter framework on the new repository, install flake8, black and isort (and run them on the repository) adding DVC in a google cloud bracket (need to do this)
+- MNIST : adding the code to github, creating the cookiecutter framework on the new repository, install flake8, black and isort (and run them on the repository) adding DVC in a google drive
 
 - Exercises from lecture : Typing on typing_exercises.py (need to add the file)
 
@@ -32,27 +32,27 @@ Modifications
 
 > S4 :
 
-- MNIST : create wandb account and add it to the main project (need to do this)
+- MNIST : create wandb account and add it to the main project, web link : https://wandb.ai/loic-ker/MNIST
 
 - Exercises from lecture : debugging and creating profile for vae_mnist_working.py
 
 > S5 :
 
-- MNIST : adding continuous integration (in the workflow) for flake8, isort and pytest
+- MNIST : adding continuous integration (in the workflow of .github) for flake8, isort and pytest
 
 - Exercises from lecture : /
 
 > S6 :
 
-- MNIST : cloud setup, switch the data from google drive to a google cloud bracket, build an image on google cloud ( in the cloudbuild.yaml)
+- MNIST : cloud setup, switch the data from google drive to a google cloud bracket, build an image on google cloud (in the cloudbuild.yaml)
 
 - Exercises from lecture : /
 
 > S7 :
 
-- MNIST : implement a quantize model in src/models
+- MNIST : implement a quantize model in src/models/model and then compare the time of execution on the src/models/quantize_test.py. We have two train models. The results show that we obtain a similar accuracy but the training is faster.
 
-- Exercises from lecture : performance on the LFW dataset, implement data_parallel.py (need to do it)
+- Exercises from lecture : performance on the LFW dataset (distribute training), implement data_parallel.py (distribute data) (I have implemented here without gpu because I dont have one), implement computational complexity (quantize).
 
 > S8 :
 

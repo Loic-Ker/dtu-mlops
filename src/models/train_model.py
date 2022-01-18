@@ -6,6 +6,8 @@ from model import Classifier
 from omegaconf import OmegaConf
 from torch import nn, optim
 
+import wandb
+
 log = logging.getLogger(__name__)
 
 
@@ -17,6 +19,11 @@ def train(config):
     lr = hparams["lr"]
     epochs = hparams["epochs"]
     dropout = hparams["perc_dropout"]
+
+    wandb.init(
+        project="MNIST",
+        config=hparams,
+    )
 
     model = Classifier(dropout)
 
@@ -31,6 +38,10 @@ def train(config):
     criterion = nn.NLLLoss()
     optimizer = optim.Adam(model.parameters(), lr=lr)
 
+    wandb.watch(model, criterion, log="all", log_freq=100)
+
+    print("Start training")
+
     for e in range(epochs):
         running_loss = 0
         for images, labels in train_set:
@@ -43,7 +54,7 @@ def train(config):
             optimizer.step()
 
             running_loss += loss.item()
-
+            wandb.log({"Training loss": loss.item()})
         # turn off gradients
         with torch.no_grad():
             # validation pass here
@@ -56,8 +67,11 @@ def train(config):
                 accuracy = torch.mean(equals.type(torch.FloatTensor))
                 count += 1
                 accuracy_epoch += accuracy
-
+                wandb.log({"Validation accuracy": accuracy})
         print(f"Accuracy, validation: {(accuracy_epoch/count)*100}%")
+
+    torch.save(model.state_dict(), "models/trained_model.pt")
+    print("Training finished !")
 
 
 if __name__ == "__main__":
