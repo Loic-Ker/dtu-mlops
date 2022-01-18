@@ -1,5 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/projettest2-338610/main_part', '.']
+  args: ['build', '-t', 'gcr.io/projettest2-338610/testing', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/projettest2-338610/maint_part']
+  args: ['push', 'gcr.io/projettest2-338610/testing']
