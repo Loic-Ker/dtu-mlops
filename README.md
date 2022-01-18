@@ -14,37 +14,35 @@ Modifications
 
 > S1 :
 
-- MNIST : adding the dependencies to conda 
+- MNIST : adding the dependencies to conda. 
 
-- Exercises from lecture : completed the notebooks about pytorch
+- Exercises from lecture : completed the notebooks about pytorch.
 
 > S2
 
-- MNIST : adding the code to github, creating the cookiecutter framework on the new repository, install flake8, black and isort (and run them on the repository) adding DVC in a google drive
-
-- Exercises from lecture : Typing on typing_exercises.py (need to add the file)
+- MNIST : adding the code to github, creating the cookiecutter framework on the new repository, install flake8, black and isort (and run them on the repository) adding DVC in a google drive.
 
 > S3 :
 
-- MNIST : adding the Docker images and Hydra configuration to the model
+- MNIST : adding the Docker images and Hydra configuration to the model.
 
 - Exercises from lecture : /
 
 > S4 :
 
-- MNIST : create wandb account and add it to the main project, web link : https://wandb.ai/loic-ker/MNIST
+- MNIST : create wandb account and add it to the main project, web link : https://wandb.ai/loic-ker/MNIST.
 
-- Exercises from lecture : debugging and creating profile for vae_mnist_working.py
+- Exercises from lecture : debugging and creating profile for vae_mnist_working.py.
 
 > S5 :
 
-- MNIST : adding continuous integration (in the workflow of .github) for flake8, isort and pytest
+- MNIST : adding continuous integration (in the workflow of .github) for flake8, isort and pytest.
 
 - Exercises from lecture : /
 
 > S6 :
 
-- MNIST : cloud setup, switch the data from google drive to a google cloud bracket, build an image on google cloud (in the cloudbuild.yaml)
+- MNIST : cloud setup, switch the data from google drive to a google cloud bracket, build an image on google cloud (in the cloudbuild.yaml).
 
 - Exercises from lecture : /
 
@@ -56,7 +54,7 @@ Modifications
 
 > S8 :
 
-- MNIST : implement local and cloud deployment
+- MNIST : implement local and cloud deployment.
 
 - Exercises from lecture : /
 
